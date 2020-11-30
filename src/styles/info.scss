@@ -1,11 +1,16 @@
 .info {
   position: relative;
+  z-index: 1;
 
   &__wrapper {
     @include section-card-wrapper;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
+  }
+
+  &__item {
+    max-width: 450px;
   }
 
   &__title {
@@ -20,8 +25,8 @@
     font-size: 1.2rem;
   }
 
-  &__item {
-    max-width: 450px;
+  &__text {
+    @include section-card-text;
   }
 
   &__sticker {

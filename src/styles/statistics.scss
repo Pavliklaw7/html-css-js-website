@@ -1,0 +1,40 @@
+.statistics {
+  position: relative;
+
+  &__image {
+    position: absolute;
+    object-fit: cover;
+    top: -8rem;
+    width: 100%;
+    z-index: 0;
+  }
+
+  &__wrapper {
+    display: flex;
+    position: relative;
+    top: 20rem;
+    justify-content: center;
+    align-items: center;
+    bottom: 32rem;
+    z-index: 1;
+    color: #fff;
+  }
+
+  &__item {
+    max-width: 250px;
+    width: fit-content;
+
+    &:not(:last-child) {
+      margin-right: 4rem;
+    }
+  }
+
+  &__value {
+    font-size: 6rem;
+  }
+
+  &__text {
+    font-size: 1.5rem;
+    font-weight: 300;
+  }
+}

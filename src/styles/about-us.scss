@@ -4,12 +4,16 @@
   }
 
   &__item {
-    max-width: 260px;
+    max-width: 300px;
   }
 
   &__title {
     font-weight: 900;
     margin-bottom: 2rem;
     font-size: 1.2rem;
+  }
+
+  &__text {
+    @include section-card-text;
   }
 }

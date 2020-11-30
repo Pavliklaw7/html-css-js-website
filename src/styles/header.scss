@@ -50,8 +50,8 @@
       transform: none;
       .header__action-link {
         @include white-button;
-        transition: $header-hover-color-transition;
-        transition: $header-hover-transform-transition;
+        transition: $header-hover-color-transition,
+          $header-hover-transform-transition;
 
         &:hover {
           color: #fff;

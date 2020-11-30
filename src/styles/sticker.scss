@@ -1,12 +1,17 @@
 .sticker {
-  width: 150px;
-  height: 150px;
+  width: 250px;
+  height: 250px;
   border-radius: 50%;
   color: #fff;
   font-size: 0.8rem;
   border: 1px solid #fff;
   background-color: #000;
+}
 
-  &__inner {
+#sticker-text {
+  position: absolute;
+  > [aria-label] {
+    top: 90px;
+    left: 75px;
   }
 }

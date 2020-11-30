@@ -1,0 +1,17 @@
+.our-goal {
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 8rem;
+  }
+
+  &__title {
+    font-size: 4rem;
+  }
+
+  &__text {
+    width: 60%;
+    font-size: 1.5rem;
+  }
+}

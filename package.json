@@ -41,6 +41,7 @@
     "projectType": "layout"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.1",
     "circletype": "^2.3.0",
     "jquery": "^3.5.1"
   }
