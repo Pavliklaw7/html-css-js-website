@@ -1,0 +1,50 @@
+.features {
+  &__wrapper {
+    margin: 15rem 6rem 15rem 15rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  &__title {
+    font-size: $section-title-font-size;
+    font-weight: 900;
+    max-width: 400px;
+    margin-top: 1rem;
+  }
+
+  &__inner {
+    max-width: 40%;
+  }
+
+  &__text {
+    white-space: wrap;
+    margin-bottom: 2rem;
+  }
+
+  &__content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, 50px);
+    gap: 0 30px;
+
+    &-item {
+      position: relative;
+      margin-left: 2rem;
+      white-space: nowrap;
+
+      &::before {
+        content: "→";
+        display: block;
+        position: absolute;
+        top: 2px;
+        left: -30px;
+        padding: 3px 4px;
+        border-radius: 50%;
+        font-size: 0.6rem;
+        color: #fff;
+        background-color: #000;
+      }
+    }
+  }
+}

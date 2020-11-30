@@ -1,0 +1,32 @@
+.nav {
+  width: 100%;
+
+  &__list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    font-size: 1rem;
+
+    &-item {
+      transition: $header-hover-transform-transition;
+    }
+
+    &-item:hover {
+      transform: $header-hover-scale;
+    }
+
+    &-item:not(:last-child) {
+      margin-right: 50px;
+    }
+  }
+
+  &__link {
+    color: #fff;
+    text-decoration: none;
+    transition: $header-hover-color-transition;
+
+    &:hover {
+      color: $header-hover-color;
+    }
+  }
+}

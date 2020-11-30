@@ -4,3 +4,32 @@
     #{$_property}: $_toValue;
   }
 }
+
+@mixin button {
+  display: block;
+  padding: 1rem 2.5rem;
+  width: fit-content;
+  transition: $header-hover-transform-transition;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+@mixin white-button {
+  @include button;
+  background-color: rgba($color: #fff, $alpha: 0.2);
+  border: 1px solid #fff;
+}
+
+@mixin section-card-wrapper {
+  position: relative;
+  top: 10rem;
+  right: 0;
+  display: flex;
+  margin-left: 8rem;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5rem 5rem;
+  background-color: #fff;
+}
