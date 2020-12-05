@@ -1,9 +1,21 @@
 .main {
   background-color: #f2f3f6;
 
-  &__our-goal-section {
+  &__info-section {
     position: relative;
-    top: 30rem;
-    margin: 5rem 0;
+    height: 400px;
+    z-index: 1;
+  }
+
+  &__statistics-section {
+    height: 500px;
+  }
+
+  &__contact-us-section {
+    position: relative;
+
+    @media (max-width: 1300px) {
+      height: 380px;
+    }
   }
 }

@@ -3,11 +3,23 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 0 8rem;
+    margin: 4rem 8rem 6rem;
+
+    @media (max-width: 770px) {
+      margin: 4rem;
+    }
+
+    @media (max-width: 770px) {
+      display: block;
+    }
   }
 
   &__title {
     font-size: 4rem;
+
+    @media (max-width: 770px) {
+      font-size: 3rem;
+    }
   }
 
   &__text {

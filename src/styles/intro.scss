@@ -5,30 +5,59 @@
     width: 100%;
     object-fit: fill;
     z-index: 0;
-    transform: scaleX(-1);
   }
 
   &__inner {
     position: relative;
     top: 50px;
-    z-index: 1;
     white-space: pre-line;
     margin-left: 8rem;
+
+    @media (max-width: 990px) {
+      top: 0;
+    }
+
+    @media (max-width: 770px) {
+      margin-left: 4rem;
+    }
   }
 
   &__title {
     color: #fff;
     font-size: 3rem;
-    line-height: 4rem;
+    line-height: initial;
+
+    @media (max-width: 560px) {
+      font-size: 1.5rem;
+    }
+
+    @media (max-width: 370px) {
+      font-size: 1rem;
+    }
   }
 
   &__button {
     @include button;
+    position: relative;
+    top: 2.5rem;
     color: #000;
     background-color: #fff;
     font-weight: 900;
+    font-size: 1.3rem;
     letter-spacing: 0.1rem;
     text-transform: uppercase;
     text-decoration: none;
+
+    @media (max-width: 990px) {
+      top: 1rem;
+    }
+
+    @media (max-width: 560px) {
+      font-size: 0.8rem;
+    }
+
+    @media (max-width: 370px) {
+      padding: 1rem 2rem;
+    }
   }
 }

@@ -1,17 +1,82 @@
 .sticker {
-  width: 250px;
-  height: 250px;
   border-radius: 50%;
   color: #fff;
   font-size: 0.8rem;
   border: 1px solid #fff;
   background-color: #000;
+  transform-origin: left;
+
+  @media (max-width: 750px) {
+    display: none;
+  }
+
+  &__wrapper {
+    position: relative;
+  }
+
+  &__inner {
+    width: 150px;
+    height: 150px;
+    position: relative;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    transform: translate(50px, 50px);
+
+    &::after,
+    &::before {
+      content: "";
+      position: absolute;
+      display: block;
+      height: 20px;
+      width: 20px;
+      background-color: #fff;
+      border-radius: 50%;
+    }
+
+    &::after {
+      top: 61px;
+      left: -34px;
+    }
+
+    &::before {
+      bottom: 67px;
+      left: 162px;
+    }
+
+    & > .far {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      font-size: 5rem;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  &__text {
+    transform: rotate(90deg);
+  }
 }
 
 #sticker-text {
   position: absolute;
-  > [aria-label] {
-    top: 90px;
-    left: 75px;
+  top: 140px;
+  color: #fff;
+  right: 75px;
+}
+
+#sticker__arc {
+  transform: rotate(170deg);
+  position: relative;
+  right: 59px;
+  bottom: 76px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 25px;
+    height: 250ex;
+    background-color: #fff;
+    border-radius: 50%;
   }
 }

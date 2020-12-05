@@ -1,28 +1,45 @@
 .statistics {
-  position: relative;
-
   &__image {
-    position: absolute;
+    position: relative;
     object-fit: cover;
-    top: -8rem;
     width: 100%;
+    height: 100%;
     z-index: 0;
   }
 
   &__wrapper {
     display: flex;
     position: relative;
-    top: 20rem;
     justify-content: center;
     align-items: center;
-    bottom: 32rem;
+    bottom: 300px;
     z-index: 1;
     color: #fff;
+
+    @media (max-width: 990px) {
+      justify-content: space-around;
+      margin: 0 5rem;
+    }
+
+    @media (max-width: 860px) {
+      bottom: 200px;
+    }
+
+    @media (max-width: 860px) {
+      bottom: 150px;
+    }
+
+    @media (max-width: 380px) {
+      bottom: 50%;
+    }
   }
 
   &__item {
     max-width: 250px;
-    width: fit-content;
+
+    @media (max-width: 990px) {
+      justify-content: 160px;
+    }
 
     &:not(:last-child) {
       margin-right: 4rem;
@@ -31,10 +48,18 @@
 
   &__value {
     font-size: 6rem;
+
+    @media (max-width: 650px) {
+      font-size: 4rem;
+    }
   }
 
   &__text {
     font-size: 1.5rem;
     font-weight: 300;
+
+    @media (max-width: 650px) {
+      font-size: 1rem;
+    }
   }
 }
