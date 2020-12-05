@@ -9,6 +9,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @media (max-width: 770px) {
+      margin: 1rem 4rem 0 4rem;
+    }
   }
 
   &__logo {
@@ -17,14 +21,31 @@
     font-size: 1.3em;
     font-weight: 900;
     text-decoration: none;
+    margin-right: 25%;
+
+    @media (max-width: 680px) {
+      margin-right: 12%;
+    }
   }
 
   &__action {
     display: flex;
     align-items: center;
+    margin-left: 10%;
+    z-index: 1;
+
+    @media (max-width: 590px) {
+      margin-left: 8%;
+      flex-direction: column;
+      align-items: flex-start;
+    }
 
     &-item {
       transition: $header-hover-transform-transition;
+
+      @media (max-width: 590px) {
+        margin-bottom: 3rem;
+      }
 
       &:hover {
         transform: $header-hover-scale;
@@ -41,6 +62,10 @@
       font-size: 1rem;
       transition: $header-hover-color-transition;
 
+      @media (max-width: 590px) {
+        font-size: 2.5rem;
+      }
+
       &:hover {
         color: $header-hover-color;
       }
@@ -53,9 +78,17 @@
         transition: $header-hover-color-transition,
           $header-hover-transform-transition;
 
+        @media (max-width: 590px) {
+          font-size: 2rem;
+        }
+
         &:hover {
           color: #fff;
           transform: $header-hover-scale;
+        }
+
+        @media (max-width: 1100px) {
+          padding: 0.7rem 1.7rem;
         }
       }
     }

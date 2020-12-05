@@ -9,7 +9,10 @@
   <body>
     <header class="header">  <!-- Header -->
       <div class="header__wrapper">
-        <a href="#" class="logo header__logo">Fundcap</a>
+        <a href="#" class="header__logo">Fundcap</a>
+        <button class="nav-tgl" type="button" aria-label="toggle menu">
+          <span aria-hidden='true'></span>
+        </button>
         <nav class="nav header__nav">
           <ul class="nav__list">
             <li class="nav__list-item">
@@ -25,15 +28,15 @@
               <a href="#" class="nav__link">About Us</a>
             </li>
           </ul>
+          <div class="header__action">
+            <div class="header__action-item">
+              <a href="#" class="header__action-link">Login</a>
+            </div>
+            <div class="header__action-item">
+              <a href="#" class="header__action-link">Get Started</a>
+            </div>
+          </div>
         </nav>
-        <div class="header__action">
-          <div class="header__action-item">
-            <a href="#" class="header__action-link">Login</a>
-          </div>
-          <div class="header__action-item">
-            <a href="#" class="header__action-link">Get Started</a>
-          </div>
-        </div>
       </div>
     </header>
     <main class="main">
@@ -99,7 +102,11 @@
       <section class="info main__info-section">  <!-- info -->
         <div class="sticker info__sticker">
           <div class="sticker__wrapper">
-            <div id="sticker-text">Wealth Container platform</div>
+            <div class="sticker__inner">
+              <p id="sticker-text">Wealth Container platform</p>
+              <i class="far fa-eye"></i> 
+              <canvas id="sticker__arc"></canvas>
+            </div>
           </div>
         </div>
         <div class="info__wrapper">
@@ -150,24 +157,140 @@
           </p>
         </div>
       </section>
-      <!-- <section class="steps main__steps-section">
+      <section class="steps main__steps-section">  <!-- steps -->
         <div class="steps__wrapper">
-          <div class="steps__item">
-            <h4 class="steps__title active">Source a deal</h4>
-            <h4 class="steps__title">Structure your SPV</h4>
-            <h4 class="steps__title">Fundraise and Close your SPV</h4>
-            <h4 class="steps__title">Close your deal - and relax</h4>
+          <div class="steps__items">
+            <label for="step-1" class="steps__title">Source a deal
+              <input
+                class="steps__input"
+                name="step"
+                id="step-1"
+                type="radio" 
+              >
+            </label>
+            <label for="step-2" class="steps__title">Structure your SPV
+              <input
+                class="steps__input"
+                name="step"
+                id="step-2"
+                type="radio"
+              >
+            </label>
+            <label for="step-3" class="steps__title">Fundraise and Close your SPV
+              <input
+                class="steps__input"
+                name="step"
+                id="step-3"
+                type="radio"
+              >
+            </label>
+            <label for="step-4" class="steps__title" >Close your deal - and relax
+              <input
+                class="steps__input"
+                name="step"
+                id="step-4"
+                type="radio"
+              >
+            </label>
           </div>
-          <div class="steps__item">
-            <img src="" alt="" class="steps__icon">
-            <div class="steps__text">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloribus ducimus accusamus nemo quas voluptatibus dolores earum consequatur, labore quae incidunt, fugiat facilis quisquam laudantium quam? Labore id nam hic! 
+          <div class="steps__content">
+            <div id="step-1-text" class="steps__description">
+              <i class="fas fa-arrow-alt-circle-down"></i>
+              <div class="steps__text">
+                1Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloribus ducimus accusamus nemo quas voluptatibus
+                dolores earum consequatur, labore quae incidunt, fugiat facilis quisquam laudantium quam? Labore id nam hic!
+              </div>
+            </div>
+            <div id="step-2-text" class="steps__description">
+              <i class="fas fa-arrow-alt-circle-down"></i>
+              <div class="steps__text">
+                2Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloribus ducimus accusamus nemo quas voluptatibus
+                dolores earum consequatur, labore quae incidunt, fugiat facilis quisquam laudantium quam? Labore id nam hic!
+              </div>
+            </div>
+            <div id="step-3-text" class="steps__description">
+              <i class="fas fa-arrow-alt-circle-down"></i>
+              <div class="steps__text">
+                3Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloribus ducimus accusamus nemo quas voluptatibus
+                dolores earum consequatur, labore quae incidunt, fugiat facilis quisquam laudantium quam? Labore id nam hic!
+              </div>
+            </div>
+            <div id="step-4-text" class="steps__description">
+              <i class="fas fa-arrow-alt-circle-down"></i>
+              <div class="steps__text">
+                4Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloribus ducimus accusamus nemo quas voluptatibus
+                dolores earum consequatur, labore quae incidunt, fugiat facilis quisquam laudantium quam? Labore id nam hic!
+              </div>
             </div>
           </div>
         </div>
-      </section> -->
+      </section>
+      <section class="contact-us main__contact-us-section">
+        <img
+          src="./images/bigsur.jpg"
+          alt="contact-us background image"
+          class="contact-us__image"
+        >
+        <div class="contact-us__wrapper">
+          <h3 class="contact-us__title">Structure your transaction faster than ever</h3>
+          <p class="contact-us__text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit ullam numquam nesciunt minima aliquid natus totam. Officiis, sit consectetur nisi deserunt praesentium at quaerat quia!
+          </p>
+          <form action="POST" class="contact-us__form">
+            <input 
+              type="text" 
+              class="contact-us__input"
+              placeholder="youremail@you.com"
+            >
+            <button type="submit" class="contact-us__button">i want it!</button>
+          </form>
+        </div>
+      </section>
     </main>
-    <script type="text/javascript" src="scripts/main.js"></script>
+    <footer class="footer">  <!-- footer -->
+      <div class="footer__column">
+        <a href="#" class="footer__logo">Fundcap</a>
+        <div class="footer__social">
+          <a href="#" class="footer__social-item">
+            <i class="fab fa-twitter-square"></i>
+          </a>
+          <a href="#" class="footer__social-item">
+            <i class="fab fa-facebook-square"></i>
+          </a>
+          <a href="#" class="footer__social-item">
+            <i class="fab fa-google-plus"></i>
+          </a>
+        </div>
+      </div>
+      <div class="footer__column">
+        <h4 class="footer__title">Product</h4>
+        <a href="" class="footer__link">Features</a>
+        <a href="" class="footer__link">Pricing</a>
+        <a href="" class="footer__link">Tour</a>
+      </div>
+      <div class="footer__column">
+        <h4 class="footer__title">Fetures</h4>
+        <a href="" class="footer__link">Portfolio</a>
+        <a href="" class="footer__link">latest work</a>
+        <a href="" class="footer__link">Brands</a>
+      </div>
+      <div class="footer__column">
+        <h4 class="footer__title">Services</h4>
+        <a href="" class="footer__link">Privacy</a>
+        <a href="" class="footer__link">Support</a>
+        <a href="" class="footer__link">Help Desk</a>
+        <a href="" class="footer__link">FAQ</a>
+      </div>
+      <div class="footer__column">
+        <h4 class="footer__title">About</h4>
+        <a href="" class="footer__link">About Us</a>
+        <a href="" class="footer__link">Blog</a>
+        <a href="" class="footer__link">Team</a>
+        <a href="" class="footer__link">Career</a>
+        <a href="" class="footer__link">Contact</a>
+      </div>
+    </footer>
+    <script type="text/javascript" src="./scripts/main.js"></script>
     <script src="https://kit.fontawesome.com/7d848e7156.js" crossorigin="anonymous"></script>
   </body>
 </html>

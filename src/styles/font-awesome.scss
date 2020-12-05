@@ -1,7 +1,17 @@
 .fab {
   font-size: 2.5rem;
+
+  @media (max-width: 770px) {
+    font-size: 2rem;
+  }
 }
 
 .fas {
   font-size: 2.5rem;
+}
+
+.fas.fa-arrow-alt-circle-down {
+  position: relative;
+  bottom: 2rem;
+  font-size: 4rem;
 }

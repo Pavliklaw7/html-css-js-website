@@ -1,0 +1,59 @@
+.footer {
+  display: flex;
+  justify-content: space-between;
+  background-color: #191024;
+  padding: 13rem 12rem 2rem 8rem;
+
+  @media (max-width: 520px) {
+    padding: 4rem 1rem 2rem 1rem;
+  }
+
+  &__logo {
+    @extend .header__logo;
+    font-size: 2rem;
+    margin-bottom: 5.5rem;
+  }
+
+  &__title {
+    color: #fff;
+    margin-top: 0;
+    font-size: 1.3rem;
+  }
+
+  &__column {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__social {
+    display: flex;
+    justify-content: space-between;
+
+    &-item {
+      justify-content: space-around;
+      color: #fff;
+
+      & > .fab {
+        font-size: 1.3rem;
+        transition: transform 0.3s ease;
+
+        &:hover {
+          transform: scale(1.5);
+        }
+      }
+    }
+  }
+
+  &__link {
+    font-size: 0.8rem;
+    color: lightgrey;
+    margin-bottom: 1.3rem;
+    text-decoration: none;
+    transition: color 0.3s, transform 0.3s ease;
+
+    &:hover {
+      color: #fff;
+      transform: scale(1.2);
+    }
+  }
+}

@@ -7,7 +7,7 @@
 
 @mixin button {
   display: block;
-  padding: 1rem 2.5rem;
+  padding: 1rem 3rem;
   width: fit-content;
   transition: $header-hover-transform-transition;
 
@@ -32,6 +32,7 @@
   align-items: center;
   padding: 5rem;
   background-color: #fff;
+  z-index: 0;
 }
 
 @mixin section-card-text {
